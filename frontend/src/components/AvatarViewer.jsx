@@ -10,18 +10,20 @@ import { applySignPose } from '../utils/signAnimator'
 // The target is a signing space 20-30 cm in front of the torso: low elbows,
 // bent forearms, separated hands, and palms turned toward the camera.
 export const SIGNING_CONFIG = {
-  background: '#20b94b',
+  background: '#eaf1ec',
   camera: { position: [0, 1.45, 3.25], fov: 32, target: [0, 1.35, 0] },
+  
   pose: {
-    leftShoulder: [-0.24, -0.58, -0.32],
-    rightShoulder: [-0.24, 0.58, 0.32],
-    leftArm: [-0.34, -0.48, -0.18],
-    rightArm: [-0.34, 0.48, 0.18],
-    leftForeArm: [-1.12, -0.14, -0.08],
-    rightForeArm: [-1.12, 0.14, 0.08],
-    leftHand: [0.16, -0.16, -0.03],
-    rightHand: [0.16, 0.16, 0.03],
-  },
+  leftShoulder: [-0.51, 0.55, 1.69],
+  leftArm: [-0.34, -0.18, -0.48],
+  leftForeArm: [-1.12, -0.14, -0.08],
+  leftHand: [0.16, -0.24, -0.03],
+
+  rightShoulder: [-0.24, 0.03, -1.72],
+  rightArm: [-0.01, -0.33, 0.44],
+  rightForeArm: [-0.28, 0.19, 0.48],
+  rightHand: [-0.60, -0.30, 0.19],
+},
 }
 
 const FRONT_SIGNING_TARGETS = Object.entries(SIGNING_CONFIG.pose).map(([key, rotation]) => ({ key, rotation }))
